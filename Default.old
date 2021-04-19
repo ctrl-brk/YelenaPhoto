@@ -1,0 +1,56 @@
+<%Option Explicit%>
+<!--#include virtual="/Framework/Open.asp"-->
+
+<h1>Welcome to <strong>the photo site!</strong></h1>
+<p style='text-align:justify'>
+   <b>Hi! My name is Yelena. I am Wedding and Lifestyle Photographer in Denver,CO metro area</b>, providing creative, artistic and unique photography inspired by your beauty, emotions, style and fashion.
+   I am able to capture most important moments of your wedding day and present them in beautiful professionally designed storytelling wedding album.
+   I also offer commercial and private portrait sessions, including high school seniors, family, maternity and kids. The studio's product line includes albums, coffee table books,
+   wedding photo invitations, post cards, picture frames, large mounted and gallery canvas wrapped prints.
+</p>
+<hr>
+<table border='0' width='100%'>
+   <tr>
+      <td style='border-right:1px solid #62584e; width:60%; vertical-align:top'>
+         <h1>Latest <strong>works</strong></h1>
+         <% dim obRec, i, sClass
+         set obRec = obConn.Execute( DebugSQL( "exec GetFeaturedImages" ) )
+         ClearDebug()
+
+         if ( not obRec.EOF ) then %>
+            <table border='0' class='tblLatest' cellspacing='0'>
+               <tr>
+                  <% i = 1
+                  while( not obRec.EOF )
+                     sClass = ""
+                     if ( i = 1 ) then sClass = " class='l_st01'"
+                     if ( i = 3 ) then sClass = " class='l_st02'" %>
+                     <td<%=sClass%>><a href='/Gallery.asp?id=<%=obRec( "GalleryId" )%>&iid=<%=obRec( "ImageId" )%>'><img src='<%=obRec( "RelativePath" ) & "/thmb/" & obRec( "ImageName" )%>'></a></td>
+                     <% obRec.MoveNext()
+                  wend %>
+            </tr>
+         </table>
+         <% else %>
+         Coming soon...
+         <% end if
+         obRec.Close() : set obRec = nothing %>
+      </td>
+      <td style='padding-left:10px; vertical-align:top'>
+         <h1>My <strong>news</strong></h1>
+         <b>Summer season is coming!</b><br>
+         That means more weddings, events, outdoor sessions and other things to keep photographers busy.
+         So, it's a good idea to think and plan all your photography needs in advance.
+      </td>
+   </tr>
+</table>
+
+<img src='/Images/btn/galleries_over.gif' style='display:none;'>
+<img src='/Images/btn/testimonials_over.gif' style='display:none;'>
+<img src='/Images/btn/store_over.gif' style='display:none;'>
+<img src='/Images/btn/about_over.gif' style='display:none;'>
+<img src='/Images/btn/playfalse.gif' style='display:none;'>
+<img src='/Images/btn/playtrue.gif' style='display:none;'>
+<img src='/Images/btn/stopfalse.gif' style='display:none;'>
+<img src='/Images/btn/stoptrue.gif' style='display:none;'>
+
+<!--#include virtual="/Framework/Close.asp"-->

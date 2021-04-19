@@ -1,0 +1,58 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+'----------------------------------------------------------------------------
+
+sub Application_OnStart
+
+   Server.ScriptTimeout = 300
+   Application( "bDebug" ) = false
+
+   SetAppConfig()
+
+end sub
+
+'----------------------------------------------------------------------------
+
+sub AddConfigItem( sItem, obVal )
+
+   Application( "Settings\" & sItem ) = obVal
+
+end sub
+
+'----------------------------------------------------------------------------
+
+sub Session_OnStart
+
+   Session( "obUpload" ) = null
+   Session( "UserFirstName" ) = ""
+
+end sub
+
+'----------------------------------------------------------------------------
+
+sub Session_OnEnd
+
+end sub
+
+'----------------------------------------------------------------------------
+
+sub SetAppConfig()
+
+   call AddConfigItem( "DSN", "Driver={SQL Server};Server=localhost;Database=YelenaPhoto;Uid=sa;Pwd=ketixin3;" )
+
+   call AddConfigItem( "URL", "http://www.yelenaphoto.com" )
+   call AddConfigItem( "SecureURL", "http://www.yelenaphoto.com" )
+   call AddConfigItem( "SiteName", "YelenaPhoto.com" )
+   call AddConfigItem( "LogFile", "/Log/Log.txt" )
+
+   call AddConfigItem( "Emails\From\System", "system@yelenaphoto.com" )
+   call AddConfigItem( "Emails\From\Webmaster", "yelena@yelenaphoto.com" )
+
+   call AddConfigItem( "Emails\To\Admin", "aleksey_grachev@yahoo.com" )
+   call AddConfigItem( "Emails\To\Error", "aleksey_grachev@yahoo.com" )
+   call AddConfigItem( "Emails\To\Webmaster", "yelena@yelenaphoto.com;aleksey_grachev@yahoo.com" )
+   call AddConfigItem( "Emails\To\Owner", "yelena@yelenaphoto.com" )
+
+end sub
+
+'----------------------------------------------------------------------------
+</SCRIPT>
