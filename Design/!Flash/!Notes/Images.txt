@@ -1,0 +1,14 @@
+TESTIMONIALS:
+
+left: tfile_pic07.jpg, tfile_pic08.jpg (168x61)
+right: tfile_pic09.jpg (168x74)
+
+
+FOLIO:
+
+left pic: tfile_pic05.jpg (111x73)
+right pic: tfile_pic06.jpg (85x90)
+
+MY BIO:
+
+pics: tfile_pic01.jpg - tfile_pic04.jpg (84x97)

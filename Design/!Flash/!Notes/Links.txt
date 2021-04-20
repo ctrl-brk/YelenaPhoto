@@ -1,0 +1,19 @@
+TESTIMONIALS:
+left text: &txt_url17 - &txt_url22
+left pics: &url7 - &url8
+right text: &txt_url23 - &txt_url28
+right pic: &url9
+
+CONTACTS:
+pic: &url10
+
+FOLIO:
+left pic: &url5
+right pic: &url6
+left links: &txt_url11 - &txt_url16
+
+MY BIO:
+
+pics: &url1 - &url4
+links under pics: &txt_url1 - &txt_url4
+right links: &txt_url5 - &txt_url10

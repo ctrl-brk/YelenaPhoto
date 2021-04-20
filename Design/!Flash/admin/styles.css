@@ -1,0 +1,158 @@
+Application {
+	background-color: #222222;
+	color: #FFFFFF;
+	theme-color: #6ED500;
+}
+
+ToolTip {
+	background-color: #FFFFFF;
+	corner-radius: 0;
+	color: #000000;
+}
+
+Alert {
+	corner-radius: 0;
+	background-color: #000000;
+	background-alpha: 0.8;
+	header-colors: #000000, #000000;
+	color: #FFFFFF;
+	button-style-name: "alertButton";
+}
+
+.alertButton {
+	color: #FFFFFF;
+}
+
+Panel {
+    corner-radius: 0;
+    header-height: 22;
+    drop-shadow: false;
+    borderThicknessLeft :0;
+    borderThicknessRight: 0;
+    border-color: #999999;
+    background-alpha: 0;
+    background-color: #000000;
+	background-alpha: 0.5;
+}
+
+TileList {
+	background-color: #000000;
+	background-alpha: 0;
+	roll-over-color: #CCCCCC;
+	selection-color: #EEEEEE;
+	border-thickness: 0px;
+}
+
+List {
+	background-color: #000000;
+	background-alpha: 0;
+	roll-over-color: #59AB00;
+	selection-color: #A20000;
+	border-thickness: 0px;
+}
+
+ComboBox {
+	disabledSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_disabledSkin");
+	downSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_downSkin");
+	editableDisabledSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_editableDisabledSkin");
+	editableDownSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_editableDownSkin");
+	editableOverSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_editableOverSkin");
+	editableUpSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_editableUpSkin");
+	overSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_overSkin");
+	upSkin: Embed(source="assets/styles/flex_skins.swf", symbol="ComboBoxArrow_upSkin");
+	
+	backgroundColor: #000000;
+	alternatingItemColors: #000000, #000000;
+    color: #ffffff;
+    fillAlphas: 1, 1, 1, 1;
+    fillColors: #000000, #000000, #000000, #000000;
+    backgroundAlpha: 1;
+    corner-radius: 0;
+}
+
+.imageComments {
+	padding-bottom: 3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	color: #FFFFFF;
+	background-color: #000000;
+	background-alpha: 1;
+}
+
+.categoryLabel {
+	font-weight:bold;
+	padding-left: 10px;
+}
+
+ScrollBar {
+    corner-radius: 0;
+    
+}
+
+VScrollBar { 
+   cornerRadius: 0;
+   borderColor: #000000;
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #999999, #999999, #999999, #999999;
+   trackColors: #000000, #000000;
+}
+HScrollBar { 
+   cornerRadius: 0;
+   borderColor: #000000;
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #999999, #999999, #999999, #999999;
+   trackColors: #000000, #000000;
+}
+
+Button {
+	corner-radius: 0;
+	fill-colors: #222222, #222222;
+	border-thickness: 0px;
+	border-style: none;
+	border-alpha: 0;
+	roll-over-color: #6ED500;
+	text-roll-over-color: #FFFFFF;
+}
+
+.deleteButton {
+	fill-colors: #CC0000, #CC0000;
+}
+
+.saveButton {
+	fill-colors: #6ED500, #6ED500;
+}
+
+
+TextInput {
+	background-alpha: 0.2;
+	border-style:solid;
+	border-thickness: 1;
+}
+
+TextArea {
+	background-alpha: 0.2;
+	border-style:solid;
+	border-thickness: 1;
+}
+
+CheckBox {
+   borderColor: #ffffff;
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #ffffff, #ffffff, #ffffff, #ffffff;
+   color: #ffffff;
+   textRollOverColor: #ffffff;
+   textSelectedColor: #ffffff;
+}
+
+.previewImage {
+	background-color: #000000;
+	background-alpha: 0.7;
+}
+
+.previewControlButton {
+	border-color: #FFFFFF;
+}
